@@ -11,6 +11,7 @@ Automation suite used to test theScore mobile app
 ## Usage
 First you must configure the properties with your phone udid and android version run the command. Assuming you are in the project directory run,
   - mvn -e -Dtest=UpdateConfigProperties -DPhone_Udid={udid} -DPlatform_Version{version}
+
 Next run the test,
   - mvn clean test -Dsurefire.suiteXmlFiles=.\src\test\resources\FindPlayer.xml
 
