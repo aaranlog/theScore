@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="LeagueTests">
+
+	<parameter name="FAVOURITE_TEAM" value="Toronto Maple Leafs" />
+	<parameter name="VALUE" value="Pascal Siakam" />
+	<parameter name="TYPE" value="Players" />
+	<parameter name="TAB" value="Info" />
+	
+	
+	
+	<test name="Setup">
+
+		<classes>
+			<class name="testFrameWork.CommonTests">
+				<methods>
+					<include name="AppiumSetUp" />
+					<include name="CreatePersonalProfile" />
+				</methods>
+			</class>
+		</classes>
+
+	</test>
+
+	<test name="Find Player">
+		<classes>
+			<class name="testFrameWork.CommonTests">
+				<methods>
+
+					<include name="Search" />
+
+				</methods>
+			</class>
+		</classes>
+	</test>
+	
+  	<test name="Find Player Info">
+		<classes>
+			<class name="testFrameWork.CommonTests">
+				<methods>
+					<include name="EnterTab" />
+					<include name="CheckPlayerInfo" />
+				</methods>
+			</class>
+		</classes>
+	</test> 
+	
+	<test name="TearDown">
+		<classes>
+			<class name="testFrameWork.CommonTests">
+				<methods>
+					<include name="Cleanup" />
+					<include name="TearDownAppium" />
+
+				</methods>
+			</class>
+		</classes>
+	</test>
+</suite> 
+

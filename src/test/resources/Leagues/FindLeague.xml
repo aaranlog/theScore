@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="LeagueTests">
+
+	<parameter name="FAVOURITE_TEAM" value="Seattle Mariners" />
+	<parameter name="VALUE" value="NBA" />
+	<parameter name="TYPE" value="Leagues" />
+	<parameter name="TEAM" value="Bucks" />
+	
+	
+	<test name="Setup">
+
+		<classes>
+			<class name="testFrameWork.MainTestFrameWork">
+				<methods>
+					<include name="AppiumSetUp" />
+					<include name="CreatePersonalProfile" />
+				</methods>
+			</class>
+		</classes>
+
+	</test>
+
+	<test name="Find League">
+		<classes>
+			<class name="testFrameWork.MainTestFrameWork">
+				<methods>
+
+					<include name="Search" />
+
+				</methods>
+			</class>
+		</classes>
+	</test>
+	
+	<test name="TearDown">
+		<classes>
+			<class name="testFrameWork.MainTestFrameWork">
+				<methods>
+					<include name="Cleanup" />
+					<include name="TearDownAppium" />
+
+				</methods>
+			</class>
+		</classes>
+	</test>
+</suite> 
+
